@@ -25,9 +25,9 @@ section.block{padding:112px 0;border-bottom:1px solid #ffffff12}.section-head{di
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
 
 /* ECLIPSE — Cosmic Cyber Realm */
-:root{--bg:#050711;--panel:#0b1020;--ink:#f2f5ff;--soft:#b9c2dc;--muted:#7884a6;--wine:#171c3b;--wine2:#343c83;--mauve:#a9a0ff;--chrome:#d9e5ff;--line:#8b9cff35;--serif:'Cormorant Garamond',Georgia,serif;--sans:Manrope,system-ui,sans-serif;--mono:'DM Mono',monospace}
+:root{--bg:#050711;--panel:#0b1020;--ink:#f2f5ff;--soft:#b9c2dc;--muted:#7884a6;--wine:#171c3b;--wine2:#343c83;--mauve:#d99acb;--chrome:#f1d9f0;--line:#c47dbb42;--serif:'Cormorant Garamond',Georgia,serif;--sans:Manrope,system-ui,sans-serif;--mono:'DM Mono',monospace}
 body{background:#050711}
-body:before{background:radial-gradient(ellipse at 50% 18%,#342d8b55,transparent 42%),radial-gradient(ellipse at 82% 58%,#087bba22,transparent 36%),radial-gradient(ellipse at 10% 82%,#3d246f44,transparent 38%),linear-gradient(145deg,#03040a,#080d1c 54%,#04050c)}
+body:before{background:radial-gradient(ellipse at 50% 18%,#57265c66,transparent 42%),radial-gradient(ellipse at 82% 58%,#44206a35,transparent 36%),radial-gradient(ellipse at 10% 82%,#5d294f44,transparent 38%),linear-gradient(145deg,#020207,#090714 54%,#030207)}
 body:after{opacity:.2;background-image:radial-gradient(#dce8ff .6px,transparent .8px);background-size:37px 37px}
 header{background:#050711d9;border-bottom-color:#a9a0ff20}
 .brand b{color:#b5b0ff;border-color:#8888ed}
@@ -47,14 +47,14 @@ header{background:#050711d9;border-bottom-color:#a9a0ff20}
 .horse-scene{position:relative;width:min(88vw,1020px);height:min(72vh,680px);display:grid;place-items:center;filter:drop-shadow(0 0 32px #637aff36)}
 .horse-scene:before{content:"";position:absolute;width:68%;height:55%;border-radius:50%;background:radial-gradient(ellipse,#6d70ff30,transparent 70%);filter:blur(40px);animation:nebulaPulse 8s ease-in-out infinite alternate}
 .horse-scene:after{content:"";position:absolute;width:72%;height:72%;border:1px solid #a6b7ff22;border-radius:50%;box-shadow:0 0 80px #6c7dff13,inset 0 0 70px #6c7dff0c;transform:rotate(-19deg) scaleY(.43);animation:orbit 42s linear infinite}
-.horse-svg{position:relative;z-index:2;width:100%;height:100%;overflow:visible}
+.horse-svg{position:relative;z-index:2;width:100%;height:100%;overflow:visible;transform-origin:52% 58%;animation:horseGallop 1.05s ease-in-out infinite}
 .horse-svg .horse-fill{fill:url(#horseMetal);stroke:#b8c8ff;stroke-width:1.1;stroke-linejoin:round}
-.horse-svg .mane{fill:none;stroke:url(#maneGlow);stroke-width:8;stroke-linecap:round;filter:url(#glow);opacity:.9}
+.horse-svg .mane{fill:none;stroke:url(#maneGlow);stroke-width:8;stroke-linecap:round;filter:url(#glow);opacity:.9;stroke-dasharray:22 9;animation:maneFlow 1.8s linear infinite}
 .horse-svg .mane-thin{fill:none;stroke:#91e6ff;stroke-width:2;stroke-linecap:round;opacity:.85;filter:url(#glow)}
 .horse-svg .etched{fill:none;stroke:#a6c7ff;stroke-width:1.1;opacity:.5}
 .horse-svg .eye{fill:#a8f2ff;filter:url(#glow)}
-.cosmic-label{position:absolute;z-index:3;bottom:5%;left:50%;transform:translateX(-50%);white-space:nowrap;font:8px var(--mono);letter-spacing:.3em;color:#aebaff;text-transform:uppercase}
-@keyframes orbit{to{transform:rotate(341deg) scaleY(.43)}}
+.horse-scene{isolation:isolate}.horse-scene:before{background:radial-gradient(ellipse,#b34e9c36,transparent 70%)}.horse-scene:after{border-color:#e7a4d52b;box-shadow:0 0 90px #b65b9b1c,inset 0 0 70px #9b4f8b12}.floral-drift{position:absolute;z-index:1;bottom:9%;left:50%;transform:translateX(-50%);width:90%;text-align:center;color:#d99acb88;font-size:clamp(17px,2.4vw,27px);letter-spacing:1.5em;text-shadow:0 0 22px #c15ca855;animation:flowerDrift 7s ease-in-out infinite alternate;white-space:nowrap}.cosmic-label{position:absolute;z-index:3;bottom:5%;left:50%;transform:translateX(-50%);white-space:nowrap;font:8px var(--mono);letter-spacing:.3em;color:#aebaff;text-transform:uppercase}
+@keyframes orbit{to{transform:rotate(341deg) scaleY(.43)}}@keyframes horseGallop{0%,100%{translate:0 0;rotate:-.35deg}50%{translate:0 -13px;rotate:.35deg}}@keyframes maneFlow{to{stroke-dashoffset:-62}}@keyframes flowerDrift{from{translate:0 5px;opacity:.42}to{translate:0 -8px;opacity:.9}}
 @keyframes nebulaPulse{to{transform:scale(1.18);opacity:.65}}
 .marquee{border-color:#9da8ff28}.marquee-track{color:#c5c9ff}.marquee-track i{color:#83dfff}
 section.block{border-bottom-color:#9da8ff18}
@@ -67,7 +67,7 @@ section.block{border-bottom-color:#9da8ff18}
 .project-status,.tech span{color:#cbd5ff}.tech span{border-color:#879aff42}
 .role:before{background:#a9a0ff;box-shadow:0 0 15px #a9a0ff}
 footer{color:#7884a6}
-@media(max-width:620px){.hero{min-height:790px}.hero-art{inset:145px -12vw 95px}.horse-scene{width:112vw;height:60vh}.cosmic-label{font-size:7px;letter-spacing:.18em}.hero h1{font-size:clamp(64px,17vw,110px)}}
+@media(max-width:620px){.hero{min-height:790px}.hero-art{inset:145px -12vw 95px}.horse-scene{width:112vw;height:60vh}.cosmic-label{font-size:7px;letter-spacing:.18em}.floral-drift{letter-spacing:.55em;font-size:15px}.hero h1{font-size:clamp(64px,17vw,110px)}}
 @media(prefers-reduced-motion:reduce){.horse-scene:before,.horse-scene:after{animation:none}}
 
 </style>
@@ -99,7 +99,7 @@ footer{color:#7884a6}
 <!-- luminous mane strands -->
 <path class="mane-thin" d="M493 151 C461 102 423 83 376 62 M481 164 C420 128 390 124 330 130 M478 188 C419 175 379 190 314 220 M481 207 C433 233 414 265 400 310"/>
 </g></svg>
-<div class="cosmic-label">A mind beyond the ordinary · Hafsa Khan</div>
+<div class="cosmic-label">✧ flowers beneath the stars · Hafsa Khan ✧</div><div class="floral-drift" aria-hidden="true">✿　✧　❀　✧　✿</div>
 </div></div><div class="hero-center wrap"><div class="hero-kicker">Cybersecurity · Research · Engineering</div><h1>Hafsa <span>Khan.</span></h1><div class="hero-tag">THE ART OF DIGITAL DEFENCE.</div><p class="hero-copy">Exploring vulnerabilities, building security-focused projects, and developing practical skills to make digital environments safer.</p><div class="hero-actions"><a class="btn primary" href="#work">Explore selected work ↗</a><a class="btn" href="https://www.linkedin.com/in/hafsa-khan-63a4623b0/" target="_blank" rel="noopener">Connect ↗</a></div></div><div class="hero-meta wrap"><span>Learn · Build · Defend</span><span>Curiosity with intention</span></div></section>
 <div class="marquee"><div class="marquee-track"><span>NETWORK SECURITY <i>✳</i></span><span>SOC &amp; BLUE TEAM <i>✳</i></span><span>ETHICAL TESTING <i>✳</i></span><span>DIGITAL FORENSICS <i>✳</i></span><span>THREAT RESEARCH <i>✳</i></span><span>PURPLE TEAMING <i>✳</i></span><span>NETWORK SECURITY <i>✳</i></span><span>SOC &amp; BLUE TEAM <i>✳</i></span><span>ETHICAL TESTING <i>✳</i></span><span>DIGITAL FORENSICS <i>✳</i></span><span>THREAT RESEARCH <i>✳</i></span><span>PURPLE TEAMING <i>✳</i></span></div></div>
 <section class="block" id="about"><div class="wrap"><div class="section-head reveal"><div><div class="section-no">01 — THE PERSON BEHIND THE SCREEN</div><h2>Curiosity with<br><em>a purpose.</em></h2></div><p class="section-intro">Good security begins with understanding how systems work — and asking better questions about how they can fail.</p></div><div class="about-grid"><div class="reveal"><div class="manifesto">I’m shaping my path through <em>practice, research and thoughtful experimentation.</em></div><p class="about-copy">As a cybersecurity student, I am developing experience through internships, guided labs, independent research and personal projects. My interests span defensive security and ethical testing, with a growing focus on SOC operations, network security, incident response and digital forensics. I value responsible testing, clear evidence and honest documentation.</p></div><div class="facts reveal"><div class="fact"><span>Current focus</span><span>SOC / Security Operations</span></div><div class="fact"><span>Assessment interests</span><span>VAPT / WAPT</span></div><div class="fact"><span>Systems &amp; scripting</span><span>Linux / Python</span></div><div class="fact"><span>Investigation</span><span>Logs / Forensics</span></div><div class="fact"><span>Research direction</span><span>Threat Intelligence</span></div></div></div></div></section>
