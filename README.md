@@ -1,27 +1,34 @@
-# Hafsa Khan — Cybersecurity Portfolio
+# Hafsa Khan — Dark Cyber Couture Portfolio
 
-A responsive static personal portfolio built with HTML, CSS and vanilla JavaScript. Designed as a dark cybersecurity command center for GitHub Pages.
+A premium, editorial cybersecurity portfolio built with HTML, CSS and vanilla JavaScript, with an original Three.js liquid-chrome ribbon hero. Designed for GitHub Pages.
 
-## Sections
-- Profile and professional introduction
-- About and current focus
-- Skills and technologies (learning/practice areas)
-- Selected projects with development status
-- Experience and learning journey
-- Research direction
-- Contact links
+## Design direction
+
+- Obsidian, deep wine, muted mauve and chrome palette.
+- Centered cinematic hero with an animated organic liquid-metal ribbon.
+- Cormorant Garamond, Manrope and DM Mono typography.
+- Editorial sections for About, Expertise, Selected Work, Experience, Research and Contact.
+- Responsive navigation and layouts, scroll reveals and reduced-motion support.
+- WebGL fallback artwork when the 3D renderer is unavailable.
+
+## Technology
+
+- Static HTML, CSS and vanilla JavaScript.
+- Three.js 0.160.0 loaded as an ES module from jsDelivr.
+- Google Fonts.
+- No build step or package installation required.
 
 ## Run locally
-Open index.html in a browser. No package installation or build step is required.
 
-## Deploy with GitHub Pages
-1. Open Settings → Pages in this repository.
-2. Under Build and deployment, select Deploy from a branch.
-3. Choose branch main and folder /(root), then save.
-4. Wait for deployment. The expected site address is https://hafsa-khan01.github.io/my-portfolio/.
+Open `index.html` in a modern browser with internet access for the hosted fonts and Three.js module. For reliable ES module loading, serve the folder with a local static HTTP server rather than opening the file directly.
 
-## Update content
-Edit index.html. Keep project descriptions and status labels aligned with the actual state of each repository. Do not publish credentials, private evidence, confidential internship material or sensitive infrastructure details.
+## GitHub Pages
+
+The production site remains configured from `main`. Do not switch the repository's Pages source to the design branch while the current production site must remain unchanged. Review the design branch separately before approving any production deployment.
+
+## Content accuracy
+
+Keep project descriptions, statuses, experience dates and research scope aligned with verified work. Do not publish credentials, private evidence, confidential internship material or sensitive infrastructure details.
 
 ---
 Built by Hafsa Khan.
