@@ -1,15 +1,15 @@
-# Hafsa Khan — Dark Cyber Couture Portfolio
+# Hafsa Khan — ECLIPSE / Cosmic Cyber Horse Portfolio
 
-A premium, editorial cybersecurity portfolio built with HTML, CSS and vanilla JavaScript, with an original Three.js liquid-chrome ribbon hero. Designed for GitHub Pages.
+A premium cosmic cyber portfolio built with HTML, CSS and vanilla JavaScript. Its visual identity centers on an original inline vector cyber horse, luminous mane details, orbital accents and an animated starfield. Designed for GitHub Pages.
 
 ## Design direction
 
-- Obsidian, deep wine, muted mauve and chrome palette.
-- Centered cinematic hero with an animated organic liquid-metal ribbon.
+- Midnight-black and deep-space palette with indigo, violet and electric-cyan accents.
+- Cinematic horse-galaxy hero with an original inline SVG centerpiece and animated starfield.
 - Cormorant Garamond, Manrope and DM Mono typography.
 - Editorial sections for About, Expertise, Selected Work, Experience, Research and Contact.
 - Responsive navigation and layouts, scroll reveals and reduced-motion support.
-- WebGL fallback artwork when the 3D renderer is unavailable.
+- Lightweight inline artwork; no paid assets, premium services or WebGL dependency.
 
 ## Technology
 
