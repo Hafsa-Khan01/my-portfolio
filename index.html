@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0d090d">
+<meta name="theme-color" content="#050711">
 <meta name="description" content="Hafsa Khan — cybersecurity student exploring defensive security, ethical testing, research and practical tools.">
-<title>Hafsa Khan — The Art of Digital Defence</title>
+<title>Hafsa Khan — ECLIPSE / Cosmic Cyber Realm</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -23,12 +23,84 @@ section.block{padding:112px 0;border-bottom:1px solid #ffffff12}.section-head{di
 @media(max-width:900px){.nav-note{display:none}.hero{min-height:820px}.about-grid,.timeline-layout{grid-template-columns:1fr;gap:38px}.expertise-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:620px){.wrap{width:calc(100% - 36px)}.nav{height:66px}.menu{display:block}.navlinks{display:none;position:absolute;top:66px;left:0;right:0;background:#120c12f5;padding:22px;flex-direction:column;gap:19px;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.hero{min-height:760px;padding:130px 0 80px}.hero-top{top:95px;font-size:7px}.hero-top span:last-child{display:none}.sculpture-wrap{inset:140px 0 110px;opacity:.72}#ribbon-canvas{width:115vw;height:100%}.hero h1{font-size:clamp(66px,17vw,110px)}.hero-tag{font-size:8px;letter-spacing:.13em}.hero-copy{font-size:11px;padding:0 10px}.hero-meta{font-size:7px;bottom:20px}.hero-meta span:last-child{display:none}section.block{padding:78px 0}.section-head{display:block;margin-bottom:32px}.section-intro{margin-top:20px}.expertise-grid,.project-grid,.research-grid{grid-template-columns:1fr}.expertise{min-height:165px}.project{min-height:310px;padding:22px}.timeline-layout{gap:28px}.contact{grid-template-columns:1fr;gap:25px}.contact-links{flex-direction:row;flex-wrap:wrap}.contact-links .btn{flex:1}.footer{flex-direction:column}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* ECLIPSE — Cosmic Cyber Realm */
+:root{--bg:#050711;--panel:#0b1020;--ink:#f2f5ff;--soft:#b9c2dc;--muted:#7884a6;--wine:#171c3b;--wine2:#343c83;--mauve:#a9a0ff;--chrome:#d9e5ff;--line:#8b9cff35;--serif:'Cormorant Garamond',Georgia,serif;--sans:Manrope,system-ui,sans-serif;--mono:'DM Mono',monospace}
+body{background:#050711}
+body:before{background:radial-gradient(ellipse at 50% 18%,#342d8b55,transparent 42%),radial-gradient(ellipse at 82% 58%,#087bba22,transparent 36%),radial-gradient(ellipse at 10% 82%,#3d246f44,transparent 38%),linear-gradient(145deg,#03040a,#080d1c 54%,#04050c)}
+body:after{opacity:.2;background-image:radial-gradient(#dce8ff .6px,transparent .8px);background-size:37px 37px}
+header{background:#050711d9;border-bottom-color:#a9a0ff20}
+.brand b{color:#b5b0ff;border-color:#8888ed}
+.navlinks a:hover,.nav-note,.eyebrow,.section-no,.expertise small,.project-no,.project-type,.role time,.research small{color:#aaa6ff}
+.hero{min-height:940px;background:radial-gradient(ellipse at 50% 54%,#18245b33,transparent 52%)}
+.hero:before{width:min(90vw,1100px);background:radial-gradient(circle,#5668d92a 0,transparent 68%)}
+.hero h1{font-family:var(--serif);text-shadow:0 5px 60px #02030a}
+.hero h1 span{background:linear-gradient(100deg,#fff 10%,#c5c8ff 48%,#91d9ff 85%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-kicker,.hero-tag{color:#c0c4ff}
+.hero-copy{color:#c2cce4}
+.btn{border-color:#9da8ff66}
+.btn.primary{background:linear-gradient(110deg,#8584ed,#a8d8ff);color:#080a18}
+.btn:hover{box-shadow:0 10px 35px #7584ff2b}
+.hero-meta{color:#8c98bb}
+.hero-art{position:absolute;z-index:0;inset:80px 0 20px;display:grid;place-items:center;pointer-events:none;overflow:hidden}
+#cosmic-stars{position:absolute;inset:0;width:100%;height:100%;opacity:.85}
+.horse-scene{position:relative;width:min(88vw,1020px);height:min(72vh,680px);display:grid;place-items:center;filter:drop-shadow(0 0 32px #637aff36)}
+.horse-scene:before{content:"";position:absolute;width:68%;height:55%;border-radius:50%;background:radial-gradient(ellipse,#6d70ff30,transparent 70%);filter:blur(40px);animation:nebulaPulse 8s ease-in-out infinite alternate}
+.horse-scene:after{content:"";position:absolute;width:72%;height:72%;border:1px solid #a6b7ff22;border-radius:50%;box-shadow:0 0 80px #6c7dff13,inset 0 0 70px #6c7dff0c;transform:rotate(-19deg) scaleY(.43);animation:orbit 42s linear infinite}
+.horse-svg{position:relative;z-index:2;width:100%;height:100%;overflow:visible}
+.horse-svg .horse-fill{fill:url(#horseMetal);stroke:#b8c8ff;stroke-width:1.1;stroke-linejoin:round}
+.horse-svg .mane{fill:none;stroke:url(#maneGlow);stroke-width:8;stroke-linecap:round;filter:url(#glow);opacity:.9}
+.horse-svg .mane-thin{fill:none;stroke:#91e6ff;stroke-width:2;stroke-linecap:round;opacity:.85;filter:url(#glow)}
+.horse-svg .etched{fill:none;stroke:#a6c7ff;stroke-width:1.1;opacity:.5}
+.horse-svg .eye{fill:#a8f2ff;filter:url(#glow)}
+.cosmic-label{position:absolute;z-index:3;bottom:5%;left:50%;transform:translateX(-50%);white-space:nowrap;font:8px var(--mono);letter-spacing:.3em;color:#aebaff;text-transform:uppercase}
+@keyframes orbit{to{transform:rotate(341deg) scaleY(.43)}}
+@keyframes nebulaPulse{to{transform:scale(1.18);opacity:.65}}
+.marquee{border-color:#9da8ff28}.marquee-track{color:#c5c9ff}.marquee-track i{color:#83dfff}
+section.block{border-bottom-color:#9da8ff18}
+.section-intro,.about-copy,.expertise p,.project p,.role p,.research p,.contact p{color:#bac5df}
+.manifesto em,h2 em,.timeline-statement em{color:#a9a0ff}
+.facts,.fact,.expertise-grid,.expertise,.project,.research,.timeline{border-color:#879aff42}
+.expertise:hover{background:linear-gradient(145deg,#3d438044,transparent)}
+.project,.research{background:linear-gradient(145deg,#111a34,#080c18 75%)}
+.project:before,.research:after{border-color:#9da8ff28;box-shadow:0 0 0 24px #9da8ff08,0 0 0 50px #9da8ff06}
+.project-status,.tech span{color:#cbd5ff}.tech span{border-color:#879aff42}
+.role:before{background:#a9a0ff;box-shadow:0 0 15px #a9a0ff}
+footer{color:#7884a6}
+@media(max-width:620px){.hero{min-height:790px}.hero-art{inset:145px -12vw 95px}.horse-scene{width:112vw;height:60vh}.cosmic-label{font-size:7px;letter-spacing:.18em}.hero h1{font-size:clamp(64px,17vw,110px)}}
+@media(prefers-reduced-motion:reduce){.horse-scene:before,.horse-scene:after{animation:none}}
+
 </style>
 </head>
 <body>
 <header><div class="wrap nav"><a class="brand" href="#home"><b>HK</b> HAFSA KHAN</a><nav class="navlinks" id="navlinks"><a href="#about">About</a><a href="#expertise">Expertise</a><a href="#work">Selected work</a><a href="#journey">Journey</a><a href="#research">Research</a><a href="#contact">Contact</a></nav><span class="nav-note">RESPONSIBLE SECURITY · 2026</span><button class="menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">MENU</button></div></header>
 <main id="home">
-<section class="hero"><div class="hero-top wrap"><span>Independent security mind</span><span>Wah Cantt · Pakistan</span></div><div class="sculpture-wrap"><div class="sculpture-fallback" id="ribbon-fallback"></div><canvas id="ribbon-canvas" aria-hidden="true"></canvas></div><div class="hero-center wrap"><div class="hero-kicker">Cybersecurity · Research · Engineering</div><h1>Hafsa <span>Khan.</span></h1><div class="hero-tag">THE ART OF DIGITAL DEFENCE.</div><p class="hero-copy">Exploring vulnerabilities, building security-focused projects, and developing practical skills to make digital environments safer.</p><div class="hero-actions"><a class="btn primary" href="#work">Explore selected work ↗</a><a class="btn" href="https://www.linkedin.com/in/hafsa-khan-63a4623b0/" target="_blank" rel="noopener">Connect ↗</a></div></div><div class="hero-meta wrap"><span>Learn · Build · Defend</span><span>Curiosity with intention</span></div></section>
+<section class="hero"><div class="hero-top wrap"><span>Independent security mind</span><span>Wah Cantt · Pakistan</span></div><div class="hero-art" aria-hidden="true">
+<canvas id="cosmic-stars"></canvas>
+<div class="horse-scene">
+<svg class="horse-svg" viewBox="0 0 1000 620" role="img" aria-label="A luminous cosmic horse">
+<defs>
+<linearGradient id="horseMetal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0f4ff"/><stop offset=".28" stop-color="#7784bd"/><stop offset=".56" stop-color="#1b2750"/><stop offset=".78" stop-color="#a8b9f4"/><stop offset="1" stop-color="#27345e"/></linearGradient>
+<linearGradient id="maneGlow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a7a0ff"/><stop offset=".5" stop-color="#82e8ff"/><stop offset="1" stop-color="#7567ff"/></linearGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<g transform="translate(18 8)">
+<!-- flowing mane -->
+<path class="mane" d="M470 177 C392 91 344 56 251 38 C325 88 330 126 243 122 C321 144 336 172 211 202 C319 192 351 221 260 286 C354 254 390 255 335 355 C424 299 440 274 454 229"/>
+<path class="mane-thin" d="M463 170 C365 77 306 70 192 56 M447 184 C347 132 294 145 170 166 M442 202 C358 193 312 228 220 292 M461 214 C405 246 395 295 368 373"/>
+<!-- horse head, neck and body silhouette -->
+<path class="horse-fill" d="M440 183 C470 139 501 116 548 104 L588 63 L603 111 C628 102 650 106 667 121 L704 129 L681 146 C693 160 689 178 675 189 L648 196 C628 223 614 253 611 285 C651 300 699 309 741 324 C789 341 820 376 826 417 L809 427 C790 390 757 377 720 372 L655 367 C633 403 621 455 629 509 L611 525 L591 517 C588 460 579 416 557 386 L507 381 C494 427 489 477 497 530 L478 542 L457 530 C452 469 439 417 417 383 C382 381 346 376 309 367 C286 402 269 454 266 508 L246 521 L229 505 C235 440 248 388 274 349 C307 300 359 266 404 237 C417 218 428 199 440 183 Z"/>
+<!-- ears and facial contour -->
+<path class="horse-fill" d="M570 112 L560 48 L592 96 Z M615 113 L637 64 L638 121 Z"/>
+<path class="etched" d="M590 143 C617 129 646 132 666 146 M613 158 C633 166 652 164 670 155 M612 179 C627 187 641 187 653 181"/>
+<path class="etched" d="M459 223 C495 253 529 269 580 278 M453 246 C484 284 516 303 555 313 M313 354 C372 339 422 341 469 355"/>
+<path class="etched" d="M282 374 C267 414 258 458 256 494 M470 389 C482 430 484 474 480 518 M601 386 C607 426 608 475 606 508"/>
+<ellipse class="eye" cx="649" cy="151" rx="5" ry="3"/>
+<!-- luminous mane strands -->
+<path class="mane-thin" d="M493 151 C461 102 423 83 376 62 M481 164 C420 128 390 124 330 130 M478 188 C419 175 379 190 314 220 M481 207 C433 233 414 265 400 310"/>
+</g></svg>
+<div class="cosmic-label">A mind beyond the ordinary · Hafsa Khan</div>
+</div></div><div class="hero-center wrap"><div class="hero-kicker">Cybersecurity · Research · Engineering</div><h1>Hafsa <span>Khan.</span></h1><div class="hero-tag">THE ART OF DIGITAL DEFENCE.</div><p class="hero-copy">Exploring vulnerabilities, building security-focused projects, and developing practical skills to make digital environments safer.</p><div class="hero-actions"><a class="btn primary" href="#work">Explore selected work ↗</a><a class="btn" href="https://www.linkedin.com/in/hafsa-khan-63a4623b0/" target="_blank" rel="noopener">Connect ↗</a></div></div><div class="hero-meta wrap"><span>Learn · Build · Defend</span><span>Curiosity with intention</span></div></section>
 <div class="marquee"><div class="marquee-track"><span>NETWORK SECURITY <i>✳</i></span><span>SOC &amp; BLUE TEAM <i>✳</i></span><span>ETHICAL TESTING <i>✳</i></span><span>DIGITAL FORENSICS <i>✳</i></span><span>THREAT RESEARCH <i>✳</i></span><span>PURPLE TEAMING <i>✳</i></span><span>NETWORK SECURITY <i>✳</i></span><span>SOC &amp; BLUE TEAM <i>✳</i></span><span>ETHICAL TESTING <i>✳</i></span><span>DIGITAL FORENSICS <i>✳</i></span><span>THREAT RESEARCH <i>✳</i></span><span>PURPLE TEAMING <i>✳</i></span></div></div>
 <section class="block" id="about"><div class="wrap"><div class="section-head reveal"><div><div class="section-no">01 — THE PERSON BEHIND THE SCREEN</div><h2>Curiosity with<br><em>a purpose.</em></h2></div><p class="section-intro">Good security begins with understanding how systems work — and asking better questions about how they can fail.</p></div><div class="about-grid"><div class="reveal"><div class="manifesto">I’m shaping my path through <em>practice, research and thoughtful experimentation.</em></div><p class="about-copy">As a cybersecurity student, I am developing experience through internships, guided labs, independent research and personal projects. My interests span defensive security and ethical testing, with a growing focus on SOC operations, network security, incident response and digital forensics. I value responsible testing, clear evidence and honest documentation.</p></div><div class="facts reveal"><div class="fact"><span>Current focus</span><span>SOC / Security Operations</span></div><div class="fact"><span>Assessment interests</span><span>VAPT / WAPT</span></div><div class="fact"><span>Systems &amp; scripting</span><span>Linux / Python</span></div><div class="fact"><span>Investigation</span><span>Logs / Forensics</span></div><div class="fact"><span>Research direction</span><span>Threat Intelligence</span></div></div></div></div></section>
 <section class="block" id="expertise"><div class="wrap"><div class="section-head reveal"><div><div class="section-no">02 — AREAS OF EXPLORATION</div><h2>An evolving<br><em>toolkit.</em></h2></div><p class="section-intro">Areas I am studying and applying in practical work. This is an evolving learning journey, not a claim of expert-level mastery.</p></div><div class="expertise-grid reveal"><article class="expertise"><small>01 / NETWORKS</small><h3>Network Security</h3><p>Understanding network behaviour, services, traffic and common controls. TCP/IP · Nmap · Wireshark</p></article><article class="expertise"><small>02 / DEFENCE</small><h3>SOC &amp; Blue Team</h3><p>Interpreting security events, investigating alerts and response workflows.</p></article><article class="expertise"><small>03 / ASSESSMENT</small><h3>Ethical Testing</h3><p>Exploring authorised reconnaissance and web application security. VAPT / WAPT · Burp Suite</p></article><article class="expertise"><small>04 / SYSTEMS</small><h3>Systems &amp; Scripting</h3><p>Building familiarity with operating systems and practical automation. Linux · Python · PowerShell</p></article><article class="expertise"><small>05 / INVESTIGATION</small><h3>Threat &amp; Forensics</h3><p>Evidence-aware investigation, traffic analysis and threat research.</p></article><article class="expertise"><small>06 / PRACTICE</small><h3>Research &amp; Documentation</h3><p>Reproducible notes, technical findings and version-controlled work. Git · GitHub</p></article></div></div></section>
@@ -47,23 +119,7 @@ document.getElementById('year').textContent=new Date().getFullYear();
 const menu=document.getElementById('menu'),nav=document.getElementById('navlinks');menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
 const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;const revealEls=document.querySelectorAll('.reveal');if(!reduced&&'IntersectionObserver'in window){const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.1});revealEls.forEach(el=>io.observe(el))}else revealEls.forEach(el=>el.classList.add('visible'));
 </script>
-<script type="module">
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
-import {RoomEnvironment} from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/environments/RoomEnvironment.js';
-const canvas=document.getElementById('ribbon-canvas'),fallback=document.getElementById('ribbon-fallback'),reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-try{
-const renderer=new THREE.WebGLRenderer({canvas,alpha:true,antialias:true,powerPreference:'low-power'});renderer.setPixelRatio(Math.min(devicePixelRatio,1.6));renderer.setSize(canvas.clientWidth,canvas.clientHeight,false);renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.15;
-const scene=new THREE.Scene();const camera=new THREE.PerspectiveCamera(34,canvas.clientWidth/canvas.clientHeight,.1,100);camera.position.set(0,0,8);
-const pmrem=new THREE.PMREMGenerator(renderer);scene.environment=pmrem.fromScene(new RoomEnvironment(),.04).texture;pmrem.dispose();
-scene.add(new THREE.AmbientLight(0xffffff,.55));const key=new THREE.DirectionalLight(0xffe8f2,3.2);key.position.set(3,4,5);scene.add(key);const rim=new THREE.PointLight(0xc47c9f,28,12);rim.position.set(-4,1,2);scene.add(rim);const cool=new THREE.PointLight(0xdce7ff,18,12);cool.position.set(3,-3,1);scene.add(cool);
-const group=new THREE.Group();scene.add(group);
-const positions=[],indices=[],uvs=[];const along=260,across=24;
-for(let i=0;i<=along;i++){const t=i/along*Math.PI*2;const cx=Math.sin(t)*1.25,cy=Math.sin(t*2)*.62,cz=Math.cos(t)*.75;const width=.18+.38*(.5+.5*Math.sin(t*3+.7));const twist=t*1.65;for(let j=0;j<=across;j++){const v=j/across-.5;const ang=twist+v*1.9;const radial=width*v;positions.push(cx+Math.cos(ang)*radial,cy+Math.sin(ang)*radial,cz+Math.sin(v*Math.PI)*.13);uvs.push(i/along,j/across);if(i<along&&j<across){const a=i*(across+1)+j,b=a+across+1;indices.push(a,b,a+1,b,b+1,a+1)}}}
-const geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));geo.setAttribute('uv',new THREE.Float32BufferAttribute(uvs,2));geo.setIndex(indices);geo.computeVertexNormals();
-const mat=new THREE.MeshPhysicalMaterial({color:0xd7cbd4,metalness:.92,roughness:.19,clearcoat:1,clearcoatRoughness:.08,side:THREE.DoubleSide,envMapIntensity:1.8});const ribbon=new THREE.Mesh(geo,mat);group.add(ribbon);
-const ring=new THREE.Mesh(new THREE.TorusGeometry(2.05,.006,8,180),new THREE.MeshBasicMaterial({color:0xb88ea8,transparent:true,opacity:.32}));ring.rotation.set(.8,.3,-.4);group.add(ring);
-const resize=()=>{const w=canvas.clientWidth,h=canvas.clientHeight;if(!w||!h)return;renderer.setSize(w,h,false);camera.aspect=w/h;camera.updateProjectionMatrix()};new ResizeObserver(resize).observe(canvas);
-let frame=0;const animate=()=>{if(document.hidden){requestAnimationFrame(animate);return}frame+=.004;if(!reduce){group.rotation.y=Math.sin(frame*.45)*.25+frame*.12;group.rotation.x=Math.sin(frame*.32)*.13;group.position.y=Math.sin(frame*.7)*.09;ring.rotation.z-=.0007}renderer.render(scene,camera);requestAnimationFrame(animate)};fallback.style.display='none';animate();
-}catch(error){canvas.style.display='none';fallback.style.display='block';console.warn('3D sculpture fallback active',error)}
+<script>
+(()=>{const c=document.getElementById('cosmic-stars');if(!c)return;const ctx=c.getContext('2d');const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;let w=0,h=0,stars=[];function resize(){const r=c.getBoundingClientRect();w=c.width=Math.round(r.width*devicePixelRatio);h=c.height=Math.round(r.height*devicePixelRatio);ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);stars=Array.from({length:Math.min(180,Math.floor(r.width*r.height/6500))},()=>({x:Math.random()*r.width,y:Math.random()*r.height,r:Math.random()*1.25+.25,a:Math.random()*.55+.2,s:Math.random()*.22+.035,p:Math.random()*6.28}))}function draw(t){const dpr=devicePixelRatio;ctx.clearRect(0,0,w/dpr,h/dpr);for(const q of stars){const tw=reduce?1:.72+Math.sin(t*.001*q.s+q.p)*.28;ctx.beginPath();ctx.fillStyle='rgba(203,220,255,'+(q.a*tw)+')';ctx.arc(q.x,q.y,q.r,0,Math.PI*2);ctx.fill();if(!reduce){q.y-=q.s*.18;if(q.y<0)q.y=h/dpr}}if(!reduce)requestAnimationFrame(draw)}new ResizeObserver(resize).observe(c);resize();draw(0);if(!reduce)requestAnimationFrame(draw)})();
 </script>
 </body></html>
