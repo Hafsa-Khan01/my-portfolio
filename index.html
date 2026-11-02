@@ -71,6 +71,29 @@ footer{color:#7884a6}
 @media(prefers-reduced-motion:reduce){.horse-scene:before,.horse-scene:after{animation:none}}
 
 
+
+/* TRUE GALLOP RIG — articulated limbs, airborne stride and hoof-impact dust */
+.horse-scene{width:min(94vw,1120px);height:min(76vh,720px);filter:drop-shadow(0 28px 28px #020208a8)}
+.horse-svg{width:100%;height:100%;overflow:visible;animation:horseFlight .92s cubic-bezier(.42,0,.58,1) infinite;transform-origin:50% 55%}
+.horse-body{transform-origin:50% 52%}
+.leg{transform-box:view-box;transform-origin:50% 0%;will-change:transform}
+.hind-near{transform-origin:365px 329px;animation:hindDrive .92s ease-in-out infinite}
+.hind-far{transform-origin:365px 329px;animation:hindTrail .92s ease-in-out infinite}
+.fore-near{transform-origin:555px 328px;animation:foreReach .92s ease-in-out infinite}
+.fore-far{transform-origin:555px 328px;animation:foreFold .92s ease-in-out infinite}
+.horse-tail{transform-origin:310px 292px;animation:tailSweep 1.4s ease-in-out infinite}
+.mane-lock{transform-origin:690px 143px;animation:maneSnap .92s ease-in-out infinite}
+.hoof-dust{opacity:0;filter:url(#horseGlow);animation:dustKick .92s ease-out infinite}
+@keyframes horseFlight{0%,100%{transform:translateY(9px) rotate(-1deg)}42%{transform:translateY(-24px) rotate(1deg)}68%{transform:translateY(-8px) rotate(0deg)}}
+@keyframes hindDrive{0%,100%{transform:rotate(34deg)}28%{transform:rotate(-22deg)}55%{transform:rotate(-48deg)}78%{transform:rotate(12deg)}}
+@keyframes hindTrail{0%,100%{transform:rotate(-28deg)}30%{transform:rotate(15deg)}58%{transform:rotate(36deg)}80%{transform:rotate(-12deg)}}
+@keyframes foreReach{0%,100%{transform:rotate(-34deg)}28%{transform:rotate(26deg)}54%{transform:rotate(42deg)}78%{transform:rotate(-12deg)}}
+@keyframes foreFold{0%,100%{transform:rotate(28deg)}28%{transform:rotate(-25deg)}54%{transform:rotate(-38deg)}78%{transform:rotate(15deg)}}
+@keyframes tailSweep{0%,100%{transform:rotate(0)}50%{transform:rotate(-12deg)}}
+@keyframes maneSnap{0%,100%{transform:translate(-2px,0) rotate(-2deg)}50%{transform:translate(7px,-5px) rotate(5deg)}}
+@keyframes dustKick{0%,52%{opacity:0;transform:translate(0,0) scale(.35)}68%{opacity:.9;transform:translate(-18px,-12px) scale(1)}100%{opacity:0;transform:translate(-52px,-24px) scale(1.5)}}
+@media(max-width:620px){.horse-scene{width:116vw;height:58vh}.horse-svg{width:125%;max-width:none}}
+@media(prefers-reduced-motion:reduce){.horse-svg,.leg,.horse-tail,.mane-lock,.hoof-dust{animation:none!important}}
 </style>
 </head>
 <body>
@@ -79,27 +102,42 @@ footer{color:#7884a6}
 <section class="hero"><div class="hero-top wrap"><span>Independent security mind</span><span>Wah Cantt · Pakistan</span></div><div class="hero-art" aria-hidden="true">
 <canvas id="cosmic-stars"></canvas>
 <div class="horse-scene">
-<svg class="horse-svg" viewBox="0 0 1000 620" role="img" aria-label="A luminous cosmic horse">
+<svg class="horse-svg" viewBox="0 0 1000 620" role="img" aria-label="A full-body black horse galloping through a cosmic night sky">
 <defs>
-<linearGradient id="horseMetal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0f4ff"/><stop offset=".28" stop-color="#7784bd"/><stop offset=".56" stop-color="#1b2750"/><stop offset=".78" stop-color="#a8b9f4"/><stop offset="1" stop-color="#27345e"/></linearGradient>
-<linearGradient id="maneGlow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a7a0ff"/><stop offset=".5" stop-color="#82e8ff"/><stop offset="1" stop-color="#7567ff"/></linearGradient>
-<filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <linearGradient id="horseCoat" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#62617d"/><stop offset=".22" stop-color="#171725"/><stop offset=".58" stop-color="#080912"/><stop offset=".82" stop-color="#29243a"/><stop offset="1" stop-color="#080811"/></linearGradient>
+ <linearGradient id="horseRim" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9b5e2"/><stop offset=".45" stop-color="#9a8bff"/><stop offset="1" stop-color="#6cd8f0"/></linearGradient>
+ <linearGradient id="maneNight" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#17101f"/><stop offset=".5" stop-color="#8d5d9c"/><stop offset="1" stop-color="#24213f"/></linearGradient>
+ <filter id="horseGlow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 </defs>
-<g transform="translate(18 8)">
-<!-- flowing mane -->
-<path class="mane" d="M470 177 C392 91 344 56 251 38 C325 88 330 126 243 122 C321 144 336 172 211 202 C319 192 351 221 260 286 C354 254 390 255 335 355 C424 299 440 274 454 229"/>
-<path class="mane-thin" d="M463 170 C365 77 306 70 192 56 M447 184 C347 132 294 145 170 166 M442 202 C358 193 312 228 220 292 M461 214 C405 246 395 295 368 373"/>
-<!-- horse head, neck and body silhouette -->
-<path class="horse-fill" d="M440 183 C470 139 501 116 548 104 L588 63 L603 111 C628 102 650 106 667 121 L704 129 L681 146 C693 160 689 178 675 189 L648 196 C628 223 614 253 611 285 C651 300 699 309 741 324 C789 341 820 376 826 417 L809 427 C790 390 757 377 720 372 L655 367 C633 403 621 455 629 509 L611 525 L591 517 C588 460 579 416 557 386 L507 381 C494 427 489 477 497 530 L478 542 L457 530 C452 469 439 417 417 383 C382 381 346 376 309 367 C286 402 269 454 266 508 L246 521 L229 505 C235 440 248 388 274 349 C307 300 359 266 404 237 C417 218 428 199 440 183 Z"/>
-<!-- ears and facial contour -->
-<path class="horse-fill" d="M570 112 L560 48 L592 96 Z M615 113 L637 64 L638 121 Z"/>
-<path class="etched" d="M590 143 C617 129 646 132 666 146 M613 158 C633 166 652 164 670 155 M612 179 C627 187 641 187 653 181"/>
-<path class="etched" d="M459 223 C495 253 529 269 580 278 M453 246 C484 284 516 303 555 313 M313 354 C372 339 422 341 469 355"/>
-<path class="etched" d="M282 374 C267 414 258 458 256 494 M470 389 C482 430 484 474 480 518 M601 386 C607 426 608 475 606 508"/>
-<ellipse class="eye" cx="649" cy="151" rx="5" ry="3"/>
-<!-- luminous mane strands -->
-<path class="mane-thin" d="M493 151 C461 102 423 83 376 62 M481 164 C420 128 390 124 330 130 M478 188 C419 175 379 190 314 220 M481 207 C433 233 414 265 400 310"/>
-</g></svg>
+<g class="horse-body">
+ <!-- tail streams behind the body -->
+ <g class="horse-tail"><path d="M306 283 C245 252 224 211 178 183 C217 244 211 273 145 286 C212 289 227 315 175 358 C245 338 275 321 315 322Z" fill="url(#maneNight)" stroke="#a47ab2" stroke-width="2"/><path d="M293 292 Q220 239 165 219 M292 307 Q220 303 164 337" fill="none" stroke="#c69ad4" stroke-width="3" opacity=".65"/></g>
+ <!-- far legs, behind the torso -->
+ <g class="leg hind-far"><path d="M365 331 Q345 371 324 405 L292 467 Q286 483 299 491 L315 485 L351 423 Q384 381 405 354Z" fill="#11111e" stroke="#756b91" stroke-width="2"/><path d="M299 482 L279 508 Q276 517 289 518 L320 514 L324 488Z" fill="#090912" stroke="#b68bc3" stroke-width="2"/></g>
+ <g class="leg fore-far"><path d="M590 330 Q615 370 629 405 L650 469 Q656 486 642 493 L626 484 L596 424 Q570 384 554 354Z" fill="#11111e" stroke="#756b91" stroke-width="2"/><path d="M642 484 L664 505 Q669 515 656 519 L626 512 L621 488Z" fill="#090912" stroke="#b68bc3" stroke-width="2"/></g>
+ <!-- barrel, back, chest, rump -->
+ <path class="torso" d="M286 245 Q326 207 402 210 Q480 183 558 218 Q613 236 637 282 Q646 315 617 345 Q571 377 485 370 Q397 376 326 346 Q278 322 268 287Z" fill="url(#horseCoat)" stroke="url(#horseRim)" stroke-width="2.4"/>
+ <path d="M301 257 Q390 218 493 231 Q570 236 615 278" fill="none" stroke="#d7b5e0" stroke-width="3" opacity=".35"/>
+ <path d="M322 337 Q432 376 567 350" fill="none" stroke="#8c78a9" stroke-width="2" opacity=".45"/>
+ <!-- neck and proud head -->
+ <path d="M548 246 Q577 197 607 153 Q633 118 674 120 Q708 123 735 151 Q753 168 779 171 L810 185 Q824 195 812 209 Q798 224 769 220 L733 212 Q711 241 681 282 Q653 316 616 326 Q590 293 548 246Z" fill="url(#horseCoat)" stroke="url(#horseRim)" stroke-width="2.5"/>
+ <path d="M672 128 Q688 91 710 77 L716 132 M732 137 Q753 105 769 103 L759 156" fill="#11101b" stroke="#b68acb" stroke-width="3" stroke-linejoin="round"/>
+ <path d="M780 174 Q808 172 831 187 Q843 197 831 209 Q817 222 786 215 L761 207Z" fill="#080811" stroke="#c49acb" stroke-width="2"/>
+ <path d="M812 200 Q826 203 835 198" fill="none" stroke="#e9c4e2" stroke-width="2"/>
+ <ellipse cx="754" cy="169" rx="5" ry="4" fill="#b9efff" filter="url(#horseGlow)"/>
+ <path d="M737 162 Q754 151 767 163" fill="none" stroke="#d9b7e3" stroke-width="2"/>
+ <!-- mane flowing backward -->
+ <path class="mane-lock" d="M692 128 Q633 91 592 75 Q630 115 582 118 Q631 139 590 166 Q644 160 618 198 Q670 182 676 151Z" fill="url(#maneNight)" stroke="#c08bc8" stroke-width="2"/>
+ <path d="M680 139 Q626 108 603 93 M676 151 Q635 145 607 151 M671 164 Q648 179 638 193" fill="none" stroke="#d4a5dc" stroke-width="2" opacity=".7"/>
+ <!-- near legs, articulated at shoulder/hip -->
+ <g class="leg hind-near"><path d="M350 326 Q332 359 340 392 L368 438 Q378 452 369 475 L349 501 Q342 516 357 518 L389 511 Q405 499 397 479 L391 442 Q382 410 389 383 Q409 355 416 342Z" fill="url(#horseCoat)" stroke="url(#horseRim)" stroke-width="2.2"/><path d="M352 505 L331 527 Q327 540 344 541 L380 535 L391 515Z" fill="#080811" stroke="#c99ad2" stroke-width="2"/></g>
+ <g class="leg fore-near"><path d="M568 327 Q593 355 584 390 L565 434 Q556 451 566 475 L586 501 Q593 516 577 520 L548 511 Q534 498 542 479 L546 440 Q548 405 535 381 Q520 356 520 342Z" fill="url(#horseCoat)" stroke="url(#horseRim)" stroke-width="2.2"/><path d="M582 505 L602 527 Q606 540 589 541 L553 535 L544 515Z" fill="#080811" stroke="#c99ad2" stroke-width="2"/></g>
+ <!-- contour highlights -->
+ <path d="M297 268 Q315 231 385 226 M580 254 Q607 273 615 307 M621 187 Q650 157 685 151" fill="none" stroke="#f1c9e8" stroke-width="2" opacity=".5"/>
+ <path d="M372 244 Q436 226 503 246" fill="none" stroke="#a9d9f1" stroke-width="1.5" opacity=".35"/>
+</g>
+<g class="hoof-dust" fill="#d8a8d1"><circle cx="343" cy="535" r="5"/><circle cx="616" cy="535" r="4"/><circle cx="294" cy="520" r="3"/></g>
+</svg>
 <div class="cosmic-label">✧ flowers beneath the stars · Hafsa Khan ✧</div><div class="floral-drift" aria-hidden="true">✿　✧　❀　✧　✿</div>
 </div></div><div class="hero-center wrap"><div class="hero-kicker">Cybersecurity · Research · Engineering</div><h1>Hafsa <span>Khan.</span></h1><div class="hero-tag">THE ART OF DIGITAL DEFENCE.</div><p class="hero-copy">Exploring vulnerabilities, building security-focused projects, and developing practical skills to make digital environments safer.</p><div class="hero-actions"><a class="btn primary" href="#work">Explore selected work ↗</a><a class="btn" href="https://www.linkedin.com/in/hafsa-khan-63a4623b0/" target="_blank" rel="noopener">Connect ↗</a></div></div><div class="hero-meta wrap"><span>Learn · Build · Defend</span><span>Curiosity with intention</span></div></section>
 <div class="marquee"><div class="marquee-track"><span>NETWORK SECURITY <i>✳</i></span><span>SOC &amp; BLUE TEAM <i>✳</i></span><span>ETHICAL TESTING <i>✳</i></span><span>DIGITAL FORENSICS <i>✳</i></span><span>THREAT RESEARCH <i>✳</i></span><span>PURPLE TEAMING <i>✳</i></span><span>NETWORK SECURITY <i>✳</i></span><span>SOC &amp; BLUE TEAM <i>✳</i></span><span>ETHICAL TESTING <i>✳</i></span><span>DIGITAL FORENSICS <i>✳</i></span><span>THREAT RESEARCH <i>✳</i></span><span>PURPLE TEAMING <i>✳</i></span></div></div>
