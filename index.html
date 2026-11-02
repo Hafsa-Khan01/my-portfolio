@@ -116,16 +116,17 @@ body:after{
 @media(max-width:620px){body:before{background-attachment:scroll}}
 
 
-/* High-visibility animated pink scanning line */
+/* Single thin pink scanline moving from top to bottom */
+body:after{background:none!important;opacity:0!important}
 .scan-beam{
-  position:fixed!important;left:0!important;right:0!important;top:-4px!important;
-  height:4px!important;z-index:9999!important;pointer-events:none!important;
-  display:block!important;opacity:1!important;
-  background:linear-gradient(90deg,transparent 0%,rgba(255,45,149,.65) 12%,#ff69b4 50%,rgba(255,45,149,.65) 88%,transparent 100%)!important;
-  box-shadow:0 0 7px 2px rgba(255,105,180,.95),0 0 18px 5px rgba(255,45,149,.72),0 0 38px 9px rgba(255,45,149,.34)!important;
-  animation:visiblePinkScan 3.8s linear infinite!important;
+ position:fixed!important;left:0!important;right:0!important;top:-2px!important;
+ height:2px!important;z-index:9999!important;pointer-events:none!important;
+ display:block!important;opacity:1!important;
+ background:rgba(255,105,180,.95)!important;
+ box-shadow:0 0 6px rgba(255,105,180,.8),0 0 12px rgba(255,45,149,.45)!important;
+ animation:singleScanline 5s linear infinite!important;
 }
-@keyframes visiblePinkScan{0%{top:-4px!important}100%{top:100vh!important}}
+@keyframes singleScanline{from{top:-2px}to{top:100vh}}
 
 </style>
 </head>
