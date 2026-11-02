@@ -54,6 +54,19 @@ h1 span{color:#ff69b4;margin-left:0}
 .orbit-ring:after{background:#ff2d95;box-shadow:0 0 12px #ff2d95}
 ::selection{background:#ff2d95;color:#10040b}
 .canva-reference{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:50%;filter:saturate(1.15) contrast(1.05)}.profile-core:after{z-index:1;pointer-events:none}.profile-core:before{z-index:4}.orbit-frame{width:min(390px,82vw)}.orbit-ring{border-color:rgba(255,45,149,.4)}@media(max-width:620px){.orbit-frame{width:min(320px,84vw)}}
+
+/* Transparent pink lock, no circuit/Wi-Fi traces, transparent panels */
+body:before{background-color:#050207;background-image:radial-gradient(ellipse at 50% 45%,rgba(140,12,75,.13),transparent 60%);background-size:auto;background-position:center;background-repeat:no-repeat}
+.profile-core{background:transparent;border-color:rgba(255,105,180,.38);box-shadow:none}
+.profile-core:after{border-color:rgba(255,105,180,.2);background:transparent}
+.core-icon{padding:18%;filter:drop-shadow(0 0 9px #ff69b455)}
+.core-icon path,.core-icon rect{fill:none;stroke:#ffb0d5;stroke-opacity:.72;stroke-width:1.45}
+.core-icon .accent{stroke:#ff69b4;stroke-opacity:.82;stroke-width:1.7}
+.console,.console-body,.console-foot,.skill,.project,.research,.contact,.ticker{background:transparent!important;box-shadow:none}
+.console:before{display:none}
+.skill:hover,.project:hover{background:rgba(255,45,149,.035)!important}
+.contact{border-color:rgba(255,45,149,.28)}
+
 </style>
 </head>
 <body>
