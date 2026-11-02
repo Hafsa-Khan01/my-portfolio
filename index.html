@@ -184,7 +184,82 @@ h2{color:#f4efff}
 @media(max-width:620px){.hero{min-height:850px;display:block;text-align:center;padding:145px 0 90px}.hero-top{top:92px}.hero-center{width:100%;max-width:100%;margin:0 auto;padding:0 18px;text-align:center}.hero h1{font-size:clamp(68px,17vw,108px);margin-top:22px}.hero-kicker{font-size:8px}.hero-tag{font-size:8px;letter-spacing:.14em}.hero-copy{margin:17px auto 23px;max-width:390px}.hero-actions{justify-content:center}.hero-art{inset:220px -10vw 42px}.galaxy-visual{right:-18%;bottom:0;width:132vw;height:68%;opacity:.74}.galaxy-glow{width:54%;height:54%}.galaxy-caption{right:17%;bottom:7%;font-size:8px;letter-spacing:.16em}.hero-meta{bottom:17px}.galaxy-visual:after{inset:16% 7%}}
 @media(prefers-reduced-motion:reduce){.galaxy-visual:after{animation:none}}
 
+
+/* CYBER REBUILD — terminal-grade portfolio skin */
+:root{
+ --bg:#05070d;--panel:#0a101b;--ink:#e9f7ff;--soft:#a8c0d2;--muted:#668095;
+ --mauve:#70f0ff;--chrome:#b9fbff;--line:#35d7ee45;
+ --sans:'Space Grotesk',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;--serif:'Orbitron',sans-serif;
+}
+html{background:#05070d}
+body{background:#05070d;color:#e9f7ff;font-family:var(--sans)}
+body:before{background:radial-gradient(ellipse at 76% 20%,#063e5940,transparent 38%),radial-gradient(ellipse at 15% 78%,#28205b42,transparent 40%),linear-gradient(135deg,#03060b,#07111c 52%,#03060a)}
+body:after{opacity:.22;background-image:linear-gradient(#54d9ee0a 1px,transparent 1px),linear-gradient(90deg,#54d9ee0a 1px,transparent 1px);background-size:42px 42px}
+header{background:#050a12e8;border-bottom:1px solid #42dff044;box-shadow:0 8px 35px #0008}
+.brand{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:#dffaff}
+.brand b{font:700 13px var(--mono);color:#70f0ff;border:1px solid #70f0ff;border-radius:4px;padding:8px 9px;box-shadow:0 0 18px #31d8ed35}
+.navlinks a,.nav-note{font-family:var(--mono);font-size:9px;color:#9cb7c9}
+.navlinks a:hover{color:#70f0ff;text-shadow:0 0 14px #70f0ff}
+.menu{border-radius:3px;color:#70f0ff}
+.hero{min-height:900px;background:radial-gradient(ellipse at 76% 50%,#073b5833,transparent 48%),linear-gradient(90deg,#03070d 0%,#050a13 52%,#04070e 100%)}
+.hero-top,.hero-meta{font-family:var(--mono);color:#7897ab;letter-spacing:.16em}
+.hero-kicker{font:600 9px var(--mono);letter-spacing:.16em;color:#70f0ff;border:1px solid #39d8ec66;background:#07141dcc;border-radius:3px;padding:10px 13px}
+.hero-kicker:before{background:#70f0ff;box-shadow:0 0 12px #70f0ff}
+.hero h1{font:700 clamp(58px,8.7vw,124px)/.9 var(--serif);letter-spacing:-.045em;color:#f1fbff;text-shadow:0 0 35px #2dd9f522}
+.hero h1 span{background:linear-gradient(100deg,#effcff 0%,#70f0ff 45%,#a58bff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-tag{font:500 10px var(--mono);letter-spacing:.18em;color:#9aebff}
+.hero-copy{font-size:13px;color:#b2c8d7;line-height:1.9}
+.btn{font:500 9px var(--mono);letter-spacing:.1em;border:1px solid #42dff077;border-radius:3px;background:#07131d;color:#dffaff}
+.btn.primary{background:linear-gradient(105deg,#52e4f5,#8b9cff);color:#041018;box-shadow:0 0 25px #37d7ee28}
+.btn:hover{border-color:#70f0ff;box-shadow:0 0 24px #37d7ee35}
+.hero-art{opacity:.9}
+.galaxy-visual{filter:hue-rotate(18deg) saturate(1.35)}
+.galaxy-visual:after{border-color:#70f0ff2a;box-shadow:0 0 65px #30d8ed19,inset 0 0 55px #30d8ed0c}
+.galaxy-caption{font:500 9px var(--mono);color:#a6f5ff;text-shadow:0 0 18px #40dff0;letter-spacing:.22em}
+.marquee{background:#07121d;border-block:1px solid #37d7ee35}
+.marquee-track{font:500 9px var(--mono);color:#b8eaff;letter-spacing:.16em}
+.marquee-track i{color:#70f0ff}
+section.block{border-bottom:1px solid #35d7ee20}
+section.block:before{background:linear-gradient(90deg,transparent,#4de7fa45,transparent)}
+.section-no,.eyebrow{font:500 9px var(--mono);color:#70f0ff;letter-spacing:.17em}
+h2{font:600 clamp(38px,6vw,72px)/1.02 var(--serif);letter-spacing:-.035em;color:#eafaff}
+h2 em,.manifesto em,.timeline-statement em{color:#70f0ff}
+.section-intro,.about-copy,.expertise p,.project p,.role p,.research p,.contact p{color:#a9bfce;font-size:12px;line-height:1.95}
+.manifesto,.timeline-statement{font:500 clamp(24px,3.5vw,42px)/1.25 var(--sans);color:#e7f6ff}
+.facts,.fact,.expertise-grid,.expertise,.project,.research,.timeline{border-color:#38d8ec42}
+.fact{font:11px var(--sans);padding:17px 0}
+.fact span:last-child{font:9px var(--mono);color:#70f0ff}
+.expertise-grid{gap:1px;background:#35d7ee36;border:1px solid #35d7ee36}
+.expertise{background:linear-gradient(145deg,#0d1a27,#070d16);min-height:205px}
+.expertise:hover{background:linear-gradient(145deg,#103244,#0a1420);border-color:#70f0ff;box-shadow:inset 0 0 35px #31d7ed12}
+.expertise small,.project-no,.project-type,.role time,.research small{font:500 9px var(--mono);color:#70f0ff;letter-spacing:.13em}
+.expertise h3,.role h3{font:600 18px var(--sans);color:#e7f8ff}
+.project-grid,.research-grid{gap:16px}
+.project,.research{background:linear-gradient(145deg,#0d1a28,#070d16 78%);border:1px solid #35d7ee42;border-radius:4px}
+.project:hover{border-color:#70f0ff;box-shadow:0 0 35px #26c9e51a,0 18px 45px #0009}
+.project:before,.research:after{border-color:#70f0ff25;box-shadow:0 0 0 22px #70f0ff08,0 0 0 46px #70f0ff05}
+.project h3,.research h3{font:600 clamp(26px,4vw,43px)/1 var(--serif);color:#e9faff}
+.project-status{font:9px var(--mono);color:#9ef7c7;border:1px solid #54d89b55;padding:5px 8px;border-radius:2px}
+.tech span{font:8px var(--mono);color:#a9edfa;border:1px solid #38d8ec55;background:#07131c;padding:6px 8px;border-radius:2px}
+.timeline{border-left:1px solid #3bd7e966}
+.role:before{background:#70f0ff;box-shadow:0 0 14px #70f0ff}
+.research{min-height:240px}
+.contact-links .btn{min-width:190px}
+footer{border-top:1px solid #35d7ee25;color:#7895a7;font:9px var(--mono)}
+footer a{color:#70f0ff!important}
+::selection{background:#70f0ff;color:#031018}
+@media(max-width:620px){
+ .hero{min-height:810px;background:linear-gradient(180deg,#03070d,#07111b)}
+ .hero h1{font-size:clamp(54px,15vw,92px)}
+ .hero-kicker{font-size:8px}
+ .hero-copy{font-size:12px}
+ .galaxy-visual{opacity:.65;filter:hue-rotate(18deg) saturate(1.35)}
+ .expertise{min-height:155px}
+}
+@media(prefers-reduced-motion:reduce){.galaxy-visual:after{animation:none}}
+
 </style>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <header><div class="wrap nav"><a class="brand" href="#home"><b>HK</b> HAFSA KHAN</a><nav class="navlinks" id="navlinks"><a href="#about">About</a><a href="#expertise">Expertise</a><a href="#work">Selected work</a><a href="#journey">Journey</a><a href="#research">Research</a><a href="#contact">Contact</a></nav><span class="nav-note">RESPONSIBLE SECURITY · 2026</span><button class="menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">MENU</button></div></header>
