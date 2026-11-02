@@ -94,6 +94,31 @@ footer{color:#7884a6}
 @keyframes dustKick{0%,52%{opacity:0;transform:translate(0,0) scale(.35)}68%{opacity:.9;transform:translate(-18px,-12px) scale(1)}100%{opacity:0;transform:translate(-52px,-24px) scale(1.5)}}
 @media(max-width:620px){.horse-scene{width:116vw;height:58vh}.horse-svg{width:125%;max-width:none}}
 @media(prefers-reduced-motion:reduce){.horse-svg,.leg,.horse-tail,.mane-lock,.hoof-dust{animation:none!important}}
+
+/* MIDNIGHT EQUESTRIAN — photographic dark-luxury reveal */
+.hero{background:radial-gradient(ellipse at 74% 55%,#6b286a26,transparent 48%),linear-gradient(105deg,#08050d 0%,#0b0711 54%,#05040a 100%);text-align:left;min-height:900px}
+.hero-center{margin-left:max(36px,calc((100vw - var(--max))/2));margin-right:auto;max-width:650px;text-align:left}
+.hero h1{font-size:clamp(72px,10vw,142px);max-width:650px}
+.hero h1 span{background:linear-gradient(100deg,#f9e8f6 4%,#dca2e8 48%,#a98bff 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-kicker{color:#d7a3e8}
+.hero-tag{color:#f0b7dc;letter-spacing:.2em}
+.hero-copy{margin-left:0;margin-right:0;max-width:450px}
+.hero-actions{justify-content:flex-start}
+.hero-art{inset:76px 0 18px;display:block;overflow:hidden;opacity:1}
+#cosmic-stars{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+.horse-photo-wrap{position:absolute;right:4.5%;bottom:-1%;width:min(51vw,690px);height:94%;display:grid;place-items:end center;isolation:isolate}
+.horse-photo{position:relative;z-index:2;width:100%;height:100%;object-fit:contain;object-position:center bottom;opacity:0;filter:brightness(.72) contrast(1.12) saturate(.72) drop-shadow(0 0 34px #a74bba35);mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%);animation:horseReveal 1.8s cubic-bezier(.2,.72,.2,1) .12s forwards,horseBreath 8s ease-in-out 1.95s infinite alternate}
+.horse-photo-aura{position:absolute;z-index:1;right:4%;bottom:9%;width:78%;height:68%;border-radius:50%;background:radial-gradient(ellipse,#9e45a33b 0%,#6234a126 40%,transparent 72%);filter:blur(42px);animation:auraPulse 9s ease-in-out infinite alternate}
+.photo-credit{position:absolute;right:25px;bottom:12px;z-index:4;color:#8e7b9b;font:7px var(--mono);letter-spacing:.12em}
+.hero-meta{z-index:5}
+.hero-center{z-index:6}
+@keyframes horseReveal{0%{opacity:0;transform:translate3d(34px,24px,0) scale(.96)}100%{opacity:.96;transform:translate3d(0,0,0) scale(1)}}
+@keyframes horseBreath{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(-5px,-5px,0) scale(1.018)}}
+@keyframes auraPulse{from{opacity:.48;transform:scale(.94)}to{opacity:.9;transform:scale(1.08)}}
+@media(max-width:900px){.hero{min-height:850px}.hero-center{margin-left:36px;max-width:560px}.horse-photo-wrap{right:-3%;width:min(64vw,620px);opacity:.82}}
+@media(max-width:620px){.hero{min-height:820px;padding:130px 0 90px;text-align:center}.hero-center{margin:0 auto;text-align:center;max-width:100%;padding:0 18px}.hero h1{font-size:clamp(66px,16vw,104px)}.hero-copy{margin:16px auto 24px}.hero-actions{justify-content:center}.hero-art{inset:130px -9vw 68px}.horse-photo-wrap{right:-8%;bottom:-2%;width:90vw;height:76%;opacity:.62}.photo-credit{right:12px;bottom:7px;font-size:6px}.hero-meta{bottom:17px}}
+@media(prefers-reduced-motion:reduce){.horse-photo,.horse-photo-aura{animation:none!important;opacity:.96}}
+
 </style>
 </head>
 <body>
@@ -101,45 +126,12 @@ footer{color:#7884a6}
 <main id="home">
 <section class="hero"><div class="hero-top wrap"><span>Independent security mind</span><span>Wah Cantt · Pakistan</span></div><div class="hero-art" aria-hidden="true">
 <canvas id="cosmic-stars"></canvas>
-<div class="horse-scene">
-<svg class="horse-svg" viewBox="0 0 1000 620" role="img" aria-label="A full-body black horse galloping through a cosmic night sky">
-<defs>
- <linearGradient id="horseCoat" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#62617d"/><stop offset=".22" stop-color="#171725"/><stop offset=".58" stop-color="#080912"/><stop offset=".82" stop-color="#29243a"/><stop offset="1" stop-color="#080811"/></linearGradient>
- <linearGradient id="horseRim" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e9b5e2"/><stop offset=".45" stop-color="#9a8bff"/><stop offset="1" stop-color="#6cd8f0"/></linearGradient>
- <linearGradient id="maneNight" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#17101f"/><stop offset=".5" stop-color="#8d5d9c"/><stop offset="1" stop-color="#24213f"/></linearGradient>
- <filter id="horseGlow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-</defs>
-<g class="horse-body">
- <!-- tail streams behind the body -->
- <g class="horse-tail"><path d="M306 283 C245 252 224 211 178 183 C217 244 211 273 145 286 C212 289 227 315 175 358 C245 338 275 321 315 322Z" fill="url(#maneNight)" stroke="#a47ab2" stroke-width="2"/><path d="M293 292 Q220 239 165 219 M292 307 Q220 303 164 337" fill="none" stroke="#c69ad4" stroke-width="3" opacity=".65"/></g>
- <!-- far legs, behind the torso -->
- <g class="leg hind-far"><path d="M365 331 Q345 371 324 405 L292 467 Q286 483 299 491 L315 485 L351 423 Q384 381 405 354Z" fill="#11111e" stroke="#756b91" stroke-width="2"/><path d="M299 482 L279 508 Q276 517 289 518 L320 514 L324 488Z" fill="#090912" stroke="#b68bc3" stroke-width="2"/></g>
- <g class="leg fore-far"><path d="M590 330 Q615 370 629 405 L650 469 Q656 486 642 493 L626 484 L596 424 Q570 384 554 354Z" fill="#11111e" stroke="#756b91" stroke-width="2"/><path d="M642 484 L664 505 Q669 515 656 519 L626 512 L621 488Z" fill="#090912" stroke="#b68bc3" stroke-width="2"/></g>
- <!-- barrel, back, chest, rump -->
- <path class="torso" d="M286 245 Q326 207 402 210 Q480 183 558 218 Q613 236 637 282 Q646 315 617 345 Q571 377 485 370 Q397 376 326 346 Q278 322 268 287Z" fill="url(#horseCoat)" stroke="url(#horseRim)" stroke-width="2.4"/>
- <path d="M301 257 Q390 218 493 231 Q570 236 615 278" fill="none" stroke="#d7b5e0" stroke-width="3" opacity=".35"/>
- <path d="M322 337 Q432 376 567 350" fill="none" stroke="#8c78a9" stroke-width="2" opacity=".45"/>
- <!-- neck and proud head -->
- <path d="M548 246 Q577 197 607 153 Q633 118 674 120 Q708 123 735 151 Q753 168 779 171 L810 185 Q824 195 812 209 Q798 224 769 220 L733 212 Q711 241 681 282 Q653 316 616 326 Q590 293 548 246Z" fill="url(#horseCoat)" stroke="url(#horseRim)" stroke-width="2.5"/>
- <path d="M672 128 Q688 91 710 77 L716 132 M732 137 Q753 105 769 103 L759 156" fill="#11101b" stroke="#b68acb" stroke-width="3" stroke-linejoin="round"/>
- <path d="M780 174 Q808 172 831 187 Q843 197 831 209 Q817 222 786 215 L761 207Z" fill="#080811" stroke="#c49acb" stroke-width="2"/>
- <path d="M812 200 Q826 203 835 198" fill="none" stroke="#e9c4e2" stroke-width="2"/>
- <ellipse cx="754" cy="169" rx="5" ry="4" fill="#b9efff" filter="url(#horseGlow)"/>
- <path d="M737 162 Q754 151 767 163" fill="none" stroke="#d9b7e3" stroke-width="2"/>
- <!-- mane flowing backward -->
- <path class="mane-lock" d="M692 128 Q633 91 592 75 Q630 115 582 118 Q631 139 590 166 Q644 160 618 198 Q670 182 676 151Z" fill="url(#maneNight)" stroke="#c08bc8" stroke-width="2"/>
- <path d="M680 139 Q626 108 603 93 M676 151 Q635 145 607 151 M671 164 Q648 179 638 193" fill="none" stroke="#d4a5dc" stroke-width="2" opacity=".7"/>
- <!-- near legs, articulated at shoulder/hip -->
- <g class="leg hind-near"><path d="M350 326 Q332 359 340 392 L368 438 Q378 452 369 475 L349 501 Q342 516 357 518 L389 511 Q405 499 397 479 L391 442 Q382 410 389 383 Q409 355 416 342Z" fill="url(#horseCoat)" stroke="url(#horseRim)" stroke-width="2.2"/><path d="M352 505 L331 527 Q327 540 344 541 L380 535 L391 515Z" fill="#080811" stroke="#c99ad2" stroke-width="2"/></g>
- <g class="leg fore-near"><path d="M568 327 Q593 355 584 390 L565 434 Q556 451 566 475 L586 501 Q593 516 577 520 L548 511 Q534 498 542 479 L546 440 Q548 405 535 381 Q520 356 520 342Z" fill="url(#horseCoat)" stroke="url(#horseRim)" stroke-width="2.2"/><path d="M582 505 L602 527 Q606 540 589 541 L553 535 L544 515Z" fill="#080811" stroke="#c99ad2" stroke-width="2"/></g>
- <!-- contour highlights -->
- <path d="M297 268 Q315 231 385 226 M580 254 Q607 273 615 307 M621 187 Q650 157 685 151" fill="none" stroke="#f1c9e8" stroke-width="2" opacity=".5"/>
- <path d="M372 244 Q436 226 503 246" fill="none" stroke="#a9d9f1" stroke-width="1.5" opacity=".35"/>
-</g>
-<g class="hoof-dust" fill="#d8a8d1"><circle cx="343" cy="535" r="5"/><circle cx="616" cy="535" r="4"/><circle cx="294" cy="520" r="3"/></g>
-</svg>
-<div class="cosmic-label">✧ flowers beneath the stars · Hafsa Khan ✧</div><div class="floral-drift" aria-hidden="true">✿　✧　❀　✧　✿</div>
-</div></div><div class="hero-center wrap"><div class="hero-kicker">Cybersecurity · Research · Engineering</div><h1>Hafsa <span>Khan.</span></h1><div class="hero-tag">THE ART OF DIGITAL DEFENCE.</div><p class="hero-copy">Exploring vulnerabilities, building security-focused projects, and developing practical skills to make digital environments safer.</p><div class="hero-actions"><a class="btn primary" href="#work">Explore selected work ↗</a><a class="btn" href="https://www.linkedin.com/in/hafsa-khan-63a4623b0/" target="_blank" rel="noopener">Connect ↗</a></div></div><div class="hero-meta wrap"><span>Learn · Build · Defend</span><span>Curiosity with intention</span></div></section>
+<div class="horse-photo-wrap">
+<img class="horse-photo" src="https://images.pexels.com/photos/6215905/pexels-photo-6215905.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="" fetchpriority="high">
+<div class="horse-photo-aura"></div>
+</div>
+<div class="photo-credit">HORSE PORTRAIT · MISSI KÖPF / PEXELS</div>
+</div><div class="hero-center wrap"><div class="hero-kicker">Cybersecurity · Research · Engineering</div><h1>Hafsa <span>Khan.</span></h1><div class="hero-tag">THE ART OF DIGITAL DEFENCE.</div><p class="hero-copy">Exploring vulnerabilities, building security-focused projects, and developing practical skills to make digital environments safer.</p><div class="hero-actions"><a class="btn primary" href="#work">Explore selected work ↗</a><a class="btn" href="https://www.linkedin.com/in/hafsa-khan-63a4623b0/" target="_blank" rel="noopener">Connect ↗</a></div></div><div class="hero-meta wrap"><span>Learn · Build · Defend</span><span>Curiosity with intention</span></div></section>
 <div class="marquee"><div class="marquee-track"><span>NETWORK SECURITY <i>✳</i></span><span>SOC &amp; BLUE TEAM <i>✳</i></span><span>ETHICAL TESTING <i>✳</i></span><span>DIGITAL FORENSICS <i>✳</i></span><span>THREAT RESEARCH <i>✳</i></span><span>PURPLE TEAMING <i>✳</i></span><span>NETWORK SECURITY <i>✳</i></span><span>SOC &amp; BLUE TEAM <i>✳</i></span><span>ETHICAL TESTING <i>✳</i></span><span>DIGITAL FORENSICS <i>✳</i></span><span>THREAT RESEARCH <i>✳</i></span><span>PURPLE TEAMING <i>✳</i></span></div></div>
 <section class="block" id="about"><div class="wrap"><div class="section-head reveal"><div><div class="section-no">01 — THE PERSON BEHIND THE SCREEN</div><h2>Curiosity with<br><em>a purpose.</em></h2></div><p class="section-intro">Good security begins with understanding how systems work — and asking better questions about how they can fail.</p></div><div class="about-grid"><div class="reveal"><div class="manifesto">I’m shaping my path through <em>practice, research and thoughtful experimentation.</em></div><p class="about-copy">As a cybersecurity student, I am developing experience through internships, guided labs, independent research and personal projects. My interests span defensive security and ethical testing, with a growing focus on SOC operations, network security, incident response and digital forensics. I value responsible testing, clear evidence and honest documentation.</p></div><div class="facts reveal"><div class="fact"><span>Current focus</span><span>SOC / Security Operations</span></div><div class="fact"><span>Assessment interests</span><span>VAPT / WAPT</span></div><div class="fact"><span>Systems &amp; scripting</span><span>Linux / Python</span></div><div class="fact"><span>Investigation</span><span>Logs / Forensics</span></div><div class="fact"><span>Research direction</span><span>Threat Intelligence</span></div></div></div></div></section>
 <section class="block" id="expertise"><div class="wrap"><div class="section-head reveal"><div><div class="section-no">02 — AREAS OF EXPLORATION</div><h2>An evolving<br><em>toolkit.</em></h2></div><p class="section-intro">Areas I am studying and applying in practical work. This is an evolving learning journey, not a claim of expert-level mastery.</p></div><div class="expertise-grid reveal"><article class="expertise"><small>01 / NETWORKS</small><h3>Network Security</h3><p>Understanding network behaviour, services, traffic and common controls. TCP/IP · Nmap · Wireshark</p></article><article class="expertise"><small>02 / DEFENCE</small><h3>SOC &amp; Blue Team</h3><p>Interpreting security events, investigating alerts and response workflows.</p></article><article class="expertise"><small>03 / ASSESSMENT</small><h3>Ethical Testing</h3><p>Exploring authorised reconnaissance and web application security. VAPT / WAPT · Burp Suite</p></article><article class="expertise"><small>04 / SYSTEMS</small><h3>Systems &amp; Scripting</h3><p>Building familiarity with operating systems and practical automation. Linux · Python · PowerShell</p></article><article class="expertise"><small>05 / INVESTIGATION</small><h3>Threat &amp; Forensics</h3><p>Evidence-aware investigation, traffic analysis and threat research.</p></article><article class="expertise"><small>06 / PRACTICE</small><h3>Research &amp; Documentation</h3><p>Reproducible notes, technical findings and version-controlled work. Git · GitHub</p></article></div></div></section>
