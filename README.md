@@ -38,7 +38,7 @@ Open `index.html` in a modern browser. For the best experience, serve the reposi
 
 The portfolio is published with GitHub Pages:
 
-https://hafsa-khan-01.github.io/my-portfolio/
+https://hafsa-khan01.github.io/my-portfolio/
 
 ## Content and security
 
