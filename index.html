@@ -67,6 +67,25 @@ body:before{background-color:#050207;background-image:radial-gradient(ellipse at
 .skill:hover,.project:hover{background:rgba(255,45,149,.035)!important}
 .contact{border-color:rgba(255,45,149,.28)}
 
+
+/* Consistent translucent glass treatment for every content box */
+:root{--glass-fill:rgba(255,45,149,.055);--glass-border:rgba(255,105,180,.22)}
+.console,.console-body,.console-foot,.skill,.project,.research,.contact,.ticker,
+.role,.about-card,.focus-card,.stat-card,.info-card,.panel,.card{
+  background:var(--glass-fill)!important;
+  border-color:var(--glass-border)!important;
+  box-shadow:0 8px 30px rgba(0,0,0,.16),inset 0 1px 0 rgba(255,190,220,.035)!important;
+  -webkit-backdrop-filter:blur(10px);
+  backdrop-filter:blur(10px);
+}
+.console:before{display:none!important}
+.skill:hover,.project:hover,.research:hover{
+  background:rgba(255,45,149,.095)!important;
+  border-color:rgba(255,105,180,.38)!important;
+}
+.contact p{color:#c7aabb}
+.orbit-label{background:rgba(8,3,9,.48)!important;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+
 </style>
 </head>
 <body>
