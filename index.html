@@ -96,6 +96,29 @@ footer{color:#7884a6}
 @media(max-width:620px){.hero{min-height:820px;padding:130px 0 90px;text-align:center}.hero-center{margin:0 auto;text-align:center;max-width:100%;padding:0 18px}.hero h1{font-size:clamp(66px,16vw,104px)}.hero-copy{margin:16px auto 24px}.hero-actions{justify-content:center}.hero-art{inset:130px -9vw 68px}.horse-photo-wrap{right:-8%;bottom:-2%;width:90vw;height:76%;opacity:.62}.photo-credit{right:12px;bottom:7px;font-size:6px}.hero-meta{bottom:17px}}
 @media(prefers-reduced-motion:reduce){.horse-photo,.horse-photo-aura{animation:none!important;opacity:.96}}
 
+
+/* ECLIPSE / FINAL HORSE GALLOP — real footage + synchronized-feel pixie dust */
+.hero{min-height:930px;background:radial-gradient(ellipse at 76% 58%,#7c2c7330,transparent 49%),linear-gradient(105deg,#07050c 0%,#0b0712 58%,#040309 100%)}
+.hero-center{max-width:590px;margin-left:max(36px,calc((100vw - var(--max))/2));z-index:8}
+.hero h1{font-size:clamp(70px,10.5vw,146px);letter-spacing:-.055em}
+.hero h1 span{background:linear-gradient(100deg,#fff0fb 2%,#e6a9df 48%,#b5a1ff 92%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-kicker,.hero-tag{color:#e6a7db}
+.hero-tag{letter-spacing:.2em}
+.hero-art{inset:70px 0 18px;z-index:1;overflow:hidden}
+#cosmic-stars{opacity:.42}
+.horse-video-wrap{position:absolute;right:1.5%;bottom:3%;width:min(61vw,830px);height:88%;display:grid;place-items:center;isolation:isolate}
+.horse-video-wrap:before{content:"";position:absolute;z-index:-1;inset:12% 4% 8%;border-radius:50%;background:radial-gradient(ellipse,#a943a544 0%,#593a9b24 42%,transparent 72%);filter:blur(45px);animation:horseAura 5.5s ease-in-out infinite alternate}
+.horse-video{width:100%;height:100%;object-fit:contain;object-position:center bottom;mix-blend-mode:screen;filter:brightness(.78) contrast(1.13) saturate(.78) drop-shadow(0 0 28px #b84da344);mask-image:linear-gradient(90deg,transparent 0%,#000 10%,#000 92%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 10%,#000 92%,transparent 100%)}
+.horse-video-aura{position:absolute;z-index:-1;bottom:5%;left:12%;width:76%;height:24%;border-radius:50%;background:radial-gradient(ellipse,#bd67b65c,transparent 70%);filter:blur(22px)}
+.horse-name-mark{position:absolute;z-index:3;right:4%;bottom:7%;font:500 clamp(13px,1.5vw,20px) var(--serif);letter-spacing:.42em;color:#f0c8eb;text-shadow:0 0 9px #e78de9,0 0 30px #b84fc5,0 0 55px #7949d9;white-space:nowrap;animation:nameGlow 3.4s ease-in-out infinite alternate}
+#pixie-dust{position:absolute;z-index:4;inset:0;width:100%;height:100%;pointer-events:none}
+.photo-credit{right:24px;bottom:10px;color:#b58caf;z-index:6}
+@keyframes horseAura{to{opacity:.7;transform:scale(1.12)}}
+@keyframes nameGlow{to{text-shadow:0 0 13px #ffd8f5,0 0 38px #d46bdc,0 0 70px #8c56ec}}
+@media(max-width:900px){.hero{min-height:860px}.hero-center{margin-left:34px;max-width:520px}.horse-video-wrap{right:-9%;width:72vw;height:76%;opacity:.9}}
+@media(max-width:620px){.hero{min-height:820px;padding:128px 0 90px;text-align:center}.hero-center{margin:0 auto;text-align:center;padding:0 16px}.hero h1{font-size:clamp(66px,16vw,104px)}.hero-copy{margin:16px auto 24px}.hero-actions{justify-content:center}.hero-art{inset:125px -8vw 64px}.horse-video-wrap{right:-12%;bottom:1%;width:112vw;height:62%;opacity:.78}.horse-name-mark{right:12%;bottom:8%;font-size:13px;letter-spacing:.28em}.photo-credit{right:10px;bottom:5px;font-size:6px}.hero-meta{bottom:17px}}
+@media(prefers-reduced-motion:reduce){.horse-video{animation:none}.horse-video-aura,.horse-video-wrap:before,.horse-name-mark{animation:none}}
+
 </style>
 </head>
 <body>
@@ -103,11 +126,15 @@ footer{color:#7884a6}
 <main id="home">
 <section class="hero"><div class="hero-top wrap"><span>Independent security mind</span><span>Wah Cantt · Pakistan</span></div><div class="hero-art" aria-hidden="true">
 <canvas id="cosmic-stars"></canvas>
-<div class="horse-photo-wrap">
-<img class="horse-photo" src="https://images.pexels.com/photos/6215905/pexels-photo-6215905.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="" fetchpriority="high">
-<div class="horse-photo-aura"></div>
+<div class="horse-video-wrap">
+<video class="horse-video" autoplay muted loop playsinline preload="metadata" poster="https://images.pexels.com/photos/6215905/pexels-photo-6215905.jpeg?auto=compress&cs=tinysrgb&w=1400" aria-label="Black horse galloping in a cinematic side view">
+<source src="https://videos.pexels.com/video-files/8625404/8625404-hd_1920_1080_30fps.mp4" type="video/mp4">
+</video>
+<div class="horse-video-aura"></div>
+<div class="horse-name-mark" aria-hidden="true">HAFSA KHAN</div>
 </div>
-<div class="photo-credit">HORSE PORTRAIT · MISSI KÖPF / PEXELS</div>
+<canvas id="pixie-dust" aria-hidden="true"></canvas>
+<div class="photo-credit">HORSE IN MOTION · PEXELS / RDNE STOCK PROJECT</div>
 </div><div class="hero-center wrap"><div class="hero-kicker">Cybersecurity · Research · Engineering</div><h1>Hafsa <span>Khan.</span></h1><div class="hero-tag">THE ART OF DIGITAL DEFENCE.</div><p class="hero-copy">Exploring vulnerabilities, building security-focused projects, and developing practical skills to make digital environments safer.</p><div class="hero-actions"><a class="btn primary" href="#work">Explore selected work ↗</a><a class="btn" href="https://www.linkedin.com/in/hafsa-khan-63a4623b0/" target="_blank" rel="noopener">Connect ↗</a></div></div><div class="hero-meta wrap"><span>Learn · Build · Defend</span><span>Curiosity with intention</span></div></section>
 <div class="marquee"><div class="marquee-track"><span>NETWORK SECURITY <i>✳</i></span><span>SOC &amp; BLUE TEAM <i>✳</i></span><span>ETHICAL TESTING <i>✳</i></span><span>DIGITAL FORENSICS <i>✳</i></span><span>THREAT RESEARCH <i>✳</i></span><span>PURPLE TEAMING <i>✳</i></span><span>NETWORK SECURITY <i>✳</i></span><span>SOC &amp; BLUE TEAM <i>✳</i></span><span>ETHICAL TESTING <i>✳</i></span><span>DIGITAL FORENSICS <i>✳</i></span><span>THREAT RESEARCH <i>✳</i></span><span>PURPLE TEAMING <i>✳</i></span></div></div>
 <section class="block" id="about"><div class="wrap"><div class="section-head reveal"><div><div class="section-no">01 — THE PERSON BEHIND THE SCREEN</div><h2>Curiosity with<br><em>a purpose.</em></h2></div><p class="section-intro">Good security begins with understanding how systems work — and asking better questions about how they can fail.</p></div><div class="about-grid"><div class="reveal"><div class="manifesto">I’m shaping my path through <em>practice, research and thoughtful experimentation.</em></div><p class="about-copy">As a cybersecurity student, I am developing experience through internships, guided labs, independent research and personal projects. My interests span defensive security and ethical testing, with a growing focus on SOC operations, network security, incident response and digital forensics. I value responsible testing, clear evidence and honest documentation.</p></div><div class="facts reveal"><div class="fact"><span>Current focus</span><span>SOC / Security Operations</span></div><div class="fact"><span>Assessment interests</span><span>VAPT / WAPT</span></div><div class="fact"><span>Systems &amp; scripting</span><span>Linux / Python</span></div><div class="fact"><span>Investigation</span><span>Logs / Forensics</span></div><div class="fact"><span>Research direction</span><span>Threat Intelligence</span></div></div></div></div></section>
@@ -131,5 +158,16 @@ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;cons
 (()=>{const c=document.getElementById('cosmic-stars');if(!c)return;const ctx=c.getContext('2d');const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;let w=0,h=0,stars=[];function resize(){const r=c.getBoundingClientRect();w=c.width=Math.round(r.width*devicePixelRatio);h=c.height=Math.round(r.height*devicePixelRatio);ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);stars=Array.from({length:Math.min(180,Math.floor(r.width*r.height/6500))},()=>({x:Math.random()*r.width,y:Math.random()*r.height,r:Math.random()*1.25+.25,a:Math.random()*.55+.2,s:Math.random()*.22+.035,p:Math.random()*6.28}))}function draw(t){const dpr=devicePixelRatio;ctx.clearRect(0,0,w/dpr,h/dpr);for(const q of stars){const tw=reduce?1:.72+Math.sin(t*.001*q.s+q.p)*.28;ctx.beginPath();ctx.fillStyle='rgba(203,220,255,'+(q.a*tw)+')';ctx.arc(q.x,q.y,q.r,0,Math.PI*2);ctx.fill();if(!reduce){q.y-=q.s*.18;if(q.y<0)q.y=h/dpr}}if(!reduce)requestAnimationFrame(draw)}new ResizeObserver(resize).observe(c);resize();draw(0)})();
 </script>
 
+
+
+<script>
+(()=>{const canvas=document.getElementById('pixie-dust');if(!canvas)return;const ctx=canvas.getContext('2d');const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;let w=0,h=0,ratio=1,particles=[],last=0;
+function resize(){const r=canvas.getBoundingClientRect();ratio=Math.min(devicePixelRatio||1,2);w=r.width;h=r.height;canvas.width=Math.round(w*ratio);canvas.height=Math.round(h*ratio);ctx.setTransform(ratio,0,0,ratio,0,0);particles=Array.from({length:reduce?0:105},()=>makeParticle(true))}
+function makeParticle(initial=false){return{x:w*(.48+Math.random()*.49),y:initial?Math.random()*h:h*(.52+Math.random()*.34),vx:-(.25+Math.random()*.9),vy:-(.22+Math.random()*.85),life:Math.random()*.9+.25,size:Math.random()*2.2+.45,phase:Math.random()*Math.PI*2,hue:Math.random()>.52?302:265}}
+function frame(t){ctx.clearRect(0,0,w,h);if(!reduce){const beat=.55+.45*Math.sin(t*.0065);for(const p of particles){p.x+=p.vx*(.7+beat*.5);p.y+=p.vy*(.7+beat*.35);p.life-=.0045;if(p.life<=0||p.x<w*.38||p.y<h*.18){Object.assign(p,makeParticle())}const alpha=Math.max(0,Math.min(1,p.life))*(.32+.55*(.5+.5*Math.sin(t*.008+p.phase)));ctx.beginPath();ctx.fillStyle='hsla('+p.hue+',90%,82%,'+alpha+')';ctx.shadowBlur=9;ctx.shadowColor='hsla('+p.hue+',95%,72%,'+alpha+')';ctx.arc(p.x,p.y,p.size*(.8+beat*.35),0,Math.PI*2);ctx.fill();if(p.size>1.65){ctx.beginPath();ctx.strokeStyle='rgba(255,220,250,'+(alpha*.5)+')';ctx.lineWidth=.6;ctx.moveTo(p.x-3,p.y);ctx.lineTo(p.x+3,p.y);ctx.moveTo(p.x,p.y-3);ctx.lineTo(p.x,p.y+3);ctx.stroke()}}ctx.shadowBlur=0;requestAnimationFrame(frame)}}
+new ResizeObserver(resize).observe(canvas);resize();if(!reduce)requestAnimationFrame(frame);
+const video=document.querySelector('.horse-video');if(video){const play=()=>video.play().catch(()=>{});document.addEventListener('visibilitychange',()=>{if(!document.hidden)play()});play()}
+})();
+</script>
 
 </body></html>
