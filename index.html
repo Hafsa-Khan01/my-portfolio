@@ -118,8 +118,8 @@ body:after{
 
 /* Visible moving pink scanline + custom key cursor */
 body:after{content:none!important;background:none!important;opacity:0!important;display:none!important}
-.scan-beam{position:fixed!important;left:0!important;right:0!important;top:0!important;height:3px!important;z-index:99999!important;pointer-events:none!important;display:block!important;opacity:1!important;background:#ff69b4!important;box-shadow:0 0 5px #ff69b4,0 0 12px rgba(255,45,149,.95),0 0 24px rgba(255,45,149,.55)!important;animation:singleScanline 4.5s linear infinite!important}
-@keyframes singleScanline{from{top:0}to{top:calc(100vh - 3px)}}
+.scan-beam{position:absolute!important;left:0!important;right:0!important;top:0!important;height:3px!important;z-index:99999!important;pointer-events:none!important;display:block!important;opacity:1!important;background:#ff69b4!important;box-shadow:0 0 5px #ff69b4,0 0 12px rgba(255,45,149,.95),0 0 24px rgba(255,45,149,.55)!important;animation:singleScanline 18s linear infinite!important}
+@keyframes singleScanline{from{top:0}to{top:var(--scan-page-height,600vh)}}
 html,body,body *{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill='%23ff69b4' stroke='%230b050c' stroke-width='1.1' stroke-linejoin='round'%3E%3Cpath d='M7 3a6 6 0 0 0 7.8 7.8L27 23l-4 4-12.2-12.2A6 6 0 0 0 3 7l4 4 4-4z'/%3E%3C/g%3E%3C/svg%3E") 7 7,auto!important}
 a,button,[role="button"]{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cg fill='%23ffb0d5' stroke='%230b050c' stroke-width='1.1' stroke-linejoin='round'%3E%3Cpath d='M7 3a6 6 0 0 0 7.8 7.8L27 23l-4 4-12.2-12.2A6 6 0 0 0 3 7l4 4 4-4z'/%3E%3C/g%3E%3C/svg%3E") 7 7,pointer!important}
 
@@ -148,6 +148,7 @@ a,button,[role="button"]{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www
 <footer><div class="wrap footer"><span>© <span id="year"></span> HAFSA KHAN</span><span>BUILT WITH CURIOSITY / GROUNDED IN PRACTICE</span><a href="#home">BACK TO TOP ↑</a></div></footer>
 <script>
 document.getElementById('year').textContent=new Date().getFullYear();
+const scanBeam=document.querySelector('.scan-beam');const updateScanlineHeight=()=>document.documentElement.style.setProperty('--scan-page-height',Math.max(document.documentElement.scrollHeight,document.body.scrollHeight)-3+'px');updateScanlineHeight();window.addEventListener('load',updateScanlineHeight);window.addEventListener('resize',updateScanlineHeight);
 const menu=document.getElementById('menu'),nav=document.getElementById('navlinks');
 menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'CLOSE':'MENU';menu.setAttribute('aria-label',open?'Close navigation':'Open navigation')});
 nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='MENU'}));
