@@ -72,29 +72,6 @@ footer{color:#7884a6}
 
 
 
-/* TRUE GALLOP RIG — articulated limbs, airborne stride and hoof-impact dust */
-.horse-scene{width:min(94vw,1120px);height:min(76vh,720px);filter:drop-shadow(0 28px 28px #020208a8)}
-.horse-svg{width:100%;height:100%;overflow:visible;animation:horseFlight .92s cubic-bezier(.42,0,.58,1) infinite;transform-origin:50% 55%}
-.horse-body{transform-origin:50% 52%}
-.leg{transform-box:view-box;transform-origin:50% 0%;will-change:transform}
-.hind-near{transform-origin:365px 329px;animation:hindDrive .92s ease-in-out infinite}
-.hind-far{transform-origin:365px 329px;animation:hindTrail .92s ease-in-out infinite}
-.fore-near{transform-origin:555px 328px;animation:foreReach .92s ease-in-out infinite}
-.fore-far{transform-origin:555px 328px;animation:foreFold .92s ease-in-out infinite}
-.horse-tail{transform-origin:310px 292px;animation:tailSweep 1.4s ease-in-out infinite}
-.mane-lock{transform-origin:690px 143px;animation:maneSnap .92s ease-in-out infinite}
-.hoof-dust{opacity:0;filter:url(#horseGlow);animation:dustKick .92s ease-out infinite}
-@keyframes horseFlight{0%,100%{transform:translateY(9px) rotate(-1deg)}42%{transform:translateY(-24px) rotate(1deg)}68%{transform:translateY(-8px) rotate(0deg)}}
-@keyframes hindDrive{0%,100%{transform:rotate(34deg)}28%{transform:rotate(-22deg)}55%{transform:rotate(-48deg)}78%{transform:rotate(12deg)}}
-@keyframes hindTrail{0%,100%{transform:rotate(-28deg)}30%{transform:rotate(15deg)}58%{transform:rotate(36deg)}80%{transform:rotate(-12deg)}}
-@keyframes foreReach{0%,100%{transform:rotate(-34deg)}28%{transform:rotate(26deg)}54%{transform:rotate(42deg)}78%{transform:rotate(-12deg)}}
-@keyframes foreFold{0%,100%{transform:rotate(28deg)}28%{transform:rotate(-25deg)}54%{transform:rotate(-38deg)}78%{transform:rotate(15deg)}}
-@keyframes tailSweep{0%,100%{transform:rotate(0)}50%{transform:rotate(-12deg)}}
-@keyframes maneSnap{0%,100%{transform:translate(-2px,0) rotate(-2deg)}50%{transform:translate(7px,-5px) rotate(5deg)}}
-@keyframes dustKick{0%,52%{opacity:0;transform:translate(0,0) scale(.35)}68%{opacity:.9;transform:translate(-18px,-12px) scale(1)}100%{opacity:0;transform:translate(-52px,-24px) scale(1.5)}}
-@media(max-width:620px){.horse-scene{width:116vw;height:58vh}.horse-svg{width:125%;max-width:none}}
-@media(prefers-reduced-motion:reduce){.horse-svg,.leg,.horse-tail,.mane-lock,.hoof-dust{animation:none!important}}
-
 /* MIDNIGHT EQUESTRIAN — photographic dark-luxury reveal */
 .hero{background:radial-gradient(ellipse at 74% 55%,#6b286a26,transparent 48%),linear-gradient(105deg,#08050d 0%,#0b0711 54%,#05040a 100%);text-align:left;min-height:900px}
 .hero-center{margin-left:max(36px,calc((100vw - var(--max))/2));margin-right:auto;max-width:650px;text-align:left}
