@@ -1,34 +1,48 @@
-# Hafsa Khan — ECLIPSE / Cosmic Cyber Horse Portfolio
+# Hafsa Khan — Cybersecurity Portfolio
 
-A premium cosmic cyber portfolio built with HTML, CSS and vanilla JavaScript. Its visual identity centers on an original inline vector cyber horse, luminous mane details, orbital accents and an animated starfield. Designed for GitHub Pages.
+A personal cybersecurity portfolio showcasing my learning journey, practical projects, internship experience and research. Built as a lightweight, responsive website for GitHub Pages.
 
-## Design direction
+## Design
 
-- Midnight-black and deep-space palette with indigo, violet and electric-cyan accents.
-- Cinematic horse-galaxy hero with an original inline SVG centerpiece and animated starfield.
-- Cormorant Garamond, Manrope and DM Mono typography.
-- Editorial sections for About, Expertise, Selected Work, Experience, Research and Contact.
-- Responsive navigation and layouts, scroll reveals and reduced-motion support.
-- Lightweight inline artwork; no paid assets, premium services or WebGL dependency.
+- Dark black interface with hot-pink accents and subtle glowing details.
+- Minimal lock illustration with orbital rings representing cybersecurity focus.
+- Animated full-page pink scanline and custom key-shaped cursor.
+- Clear sections for Profile, Focus, Projects, Experience, Research and Contact.
+- Responsive layouts, mobile navigation and scroll-reveal effects.
+- Glass-style cards and restrained motion to keep the content readable.
+
+## Featured work
+
+- **NexCYR** — Unified cybersecurity assessment and purple-team platform.
+- **AiHirSaq** — AI-agent security governance project.
+- **SCATTER AI** — PowerShell security telemetry and ransomware-detection MVP.
+- **The 360° Cyber Shield** — Practical study exploring offensive and defensive security workflows.
+
+Project descriptions and statuses reflect their current development or study stages.
 
 ## Technology
 
-- Static HTML, CSS and vanilla JavaScript.
-- Three.js 0.160.0 loaded as an ES module from jsDelivr.
-- Google Fonts.
-- No build step or package installation required.
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Inline SVG artwork
+- Google Fonts
+
+No framework or build step is required.
 
 ## Run locally
 
-Open `index.html` in a modern browser with internet access for the hosted fonts and Three.js module. For reliable ES module loading, serve the folder with a local static HTTP server rather than opening the file directly.
+Open `index.html` in a modern browser. For the best experience, serve the repository with a local static HTTP server.
 
 ## GitHub Pages
 
-The production site remains configured from `main`. Do not switch the repository's Pages source to the design branch while the current production site must remain unchanged. Review the design branch separately before approving any production deployment.
+The portfolio is published with GitHub Pages:
 
-## Content accuracy
+https://hafsa-khan-01.github.io/my-portfolio/
 
-Keep project descriptions, statuses, experience dates and research scope aligned with verified work. Do not publish credentials, private evidence, confidential internship material or sensitive infrastructure details.
+## Content and security
+
+Project descriptions, experience and research details should remain accurate and aligned with verified work. Do not publish credentials, private evidence, confidential internship material or sensitive infrastructure details.
 
 ---
 Built by Hafsa Khan.
