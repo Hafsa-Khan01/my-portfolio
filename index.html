@@ -148,6 +148,31 @@ a,button,[role="button"]{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www
 
 /* Reference background requested by user — retain the original black/pink styling */
 body{background-color:var(--bg);background-image:linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.62)),url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIzMNvUnqSC6T5idM2pCT251CGDqlVe2sq1Cl2qj43Qg&s=10");background-position:center center;background-size:cover;background-repeat:no-repeat;background-attachment:fixed}
+
+/* Lighthouse pass: defer off-screen section rendering without changing layout or content. */
+section:not(.hero){
+  content-visibility:auto;
+  contain-intrinsic-size:auto 760px;
+}
+/* Keep the existing glass/cyber look while reducing expensive blur work. */
+header{-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.glass,.console,.console-body,.console-foot,.skill,.project,.research,.contact,.ticker,
+.role,.about-card,.focus-card,.stat-card,.info-card,.panel,.card{
+  -webkit-backdrop-filter:blur(3px);
+  backdrop-filter:blur(3px);
+}
+.orbit-label{-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+/* Respect system motion preferences across all decorative animations. */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+    scroll-behavior:auto!important;
+  }
+}
+
 </style>
 </head>
 <body>
